@@ -5,8 +5,6 @@ import path from "path";
 
 export const importData = async () => {
   try {
-    await dbConnect();
-
     const workbook = xlsx.readFile(
       path.join(__dirname, "../data/demo_data.xls")
     );
@@ -27,13 +25,12 @@ export const importData = async () => {
       });
     }
 
-    console.log("✅ Data imported successfully");
+    console.log("Data imported successfully");
     const allProducts = await Product.find();
-    console.log("📦 Fetched products:", allProducts);
+    console.log("Fetched products:", allProducts);
   } catch (error) {
-    console.error("❌ Error during import:", error);
+    console.error("Error during import:", error);
   } finally {
-    // Optional but clean
     process.exit();
   }
 };

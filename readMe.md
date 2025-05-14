@@ -14,8 +14,9 @@ This README outlines the technologies used to build the Neuralens AI Project, de
   - I created a importData function in **utils/importData** which is used for importing the data in mongodb.
     [![showing the function for importing the data](image.png)]
     (![pushing in mongodb](image-1.png))
+    ![screenshot of database containing the data](image-2.png)
 
-    -if you want to put some new data in data base just put he file in ./backend/dist/data keep the name of the file as **demo_data.xls** and then un comment the **importData()** statment in backend/src/index.ts folder
+  - if you want to put some new data in data base just put he file in **./backend/dist/data** keep the name of the file as **demo_data.xls** and then un comment the **importData()** statment in **backend/src/index.ts** folder
 
 ## Frontend
 

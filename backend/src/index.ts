@@ -20,6 +20,10 @@ app.get("/", (req, res) => {
   res.send("<H1>hello Neuralens Ai</H1>");
 });
 
+//routes for product api
+import productRoutes from "./routes/productRoutes.ts";
+app.use("/api/v1/product", productRoutes);
+
 const port = process.env.port || 8083;
 app.listen(port, () => {
   console.log("server in running on port: ", port);
