@@ -1,6 +1,3 @@
-"use client";
-import { cn } from "../lib/utils";
-
 export interface propDocument {
   product_name: string;
   price: number;
@@ -8,46 +5,20 @@ export interface propDocument {
   description: string;
   manufacturer: string;
   color: string;
-  size: string | Array<number | string>;
+  size: Array<number | string>;
   dimension: string;
   image_url: string;
 }
-export function Card(Props: propDocument) {
+
+export function Card(props: propDocument) {
   return (
-    <div className="max-w-xs w-full group/card">
-      <div
-        className={cn(
-          " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-          "bg-[url(https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80)] bg-cover"
-        )}
-      >
-        <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
-        <div className="flex flex-row items-center space-x-4 z-10">
-          <img
-            height="100"
-            width="100"
-            alt="Avatar"
-            src="/manu.png"
-            className="h-10 w-10 rounded-full border-2 object-cover"
-          />
-          <div className="flex flex-col">
-            <p className="font-normal text-base text-gray-50 relative z-10">
-              {Props.product_name}
-            </p>
-            <p className="text-sm text-gray-400">2 min read</p>
-          </div>
-        </div>
-        <div className="text content">
-          <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-            {Props.price}
-            <br />
-            {Props.color}
-          </h1>
-          <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
-            {Props.description}
-          </p>
-        </div>
-      </div>
+    <div className="m-3 bg-blend-hue p-10 h-auto rounded-2xl shadow-2xl shadow-gray-400 hover:scale-110 font-mono text-gray-600 text-xl ">
+      <h1>{props.product_name}</h1>
+      <img src={props.image_url} className="w-80 h-80" />
+      <h3>
+        color: {props.color} | category: {props.category}
+      </h3>
+      <p>{props.manufacturer}</p>
     </div>
   );
 }
