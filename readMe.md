@@ -29,11 +29,20 @@ This README outlines the technologies used to build the Neuralens AI Project, de
 
 ## Frontend
 
-**Technologies:**
+**Pages:**
+
+- **Landing page** I visited neuralens Ai website so I sorted followed them of company page
+  ![alt text](image-4.png)
+
+- **product page** page where all product is shown
+  ![alt text](image-5.png)
+  **Technologies:**
 
 - **React & Vite:** The app is built with React and bundled using Vite, offering a faster and more optimized development experience than Create React App.
 - **TypeScript:** Ensures type safety and helps catch errors during development.
 - **Tailwind CSS:** Used for responsive and efficient styling of the application.
+
+- **Shadcn & accernity** these ui library are used for landing page effect and buttons just to show that I am comfortable with these library
 
 ## Project Note
 

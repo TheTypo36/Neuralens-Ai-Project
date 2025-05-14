@@ -70,10 +70,13 @@ function ProductPage() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 mt-10">
         <h1 className="w-full z-10 fixed top-0 left-0 h-20 bg-gray-400 flex flex-row justify-between p-3 items-center text-white text-3xl">
-          <span className="text-purple-500 text-5xl" onClick={handleNavigate}>
-            Neuralens
+          <span
+            className="text-purple-500 text-5xl cursor-pointer"
+            onClick={handleNavigate}
+          >
+            Neuralens AI
           </span>{" "}
-          <span>AI product page</span>
+          <span>product page</span>
         </h1>
         {loading && <h1>Loading ...</h1>}
         {!loading &&
