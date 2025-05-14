@@ -23,8 +23,8 @@ function App() {
         </h2>
       </BackgroundBeamsWithCollision>
       <div>
-        <Button variant="ghost" size={"lg"} onClick={handleClick}>
-          Products
+        <Button variant="outline" size={"lg"} onClick={handleClick}>
+          See Products
         </Button>
       </div>
     </div>

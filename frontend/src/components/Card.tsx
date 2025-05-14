@@ -19,6 +19,7 @@ export function Card(props: propDocument) {
         color: {props.color} | category: {props.category}
       </h3>
       <p>{props.manufacturer}</p>
+      <p>price: {props.price}</p>
     </div>
   );
 }

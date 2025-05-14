@@ -6,8 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const dbConnect_1 = require("./db/dbConnect");
+const cors_1 = __importDefault(require("cors"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
+app.use((0, cors_1.default)());
 (0, dbConnect_1.dbConnect)().then(() => {
     app.on("error", (error) => {
         console.error("error in db connection", error);
