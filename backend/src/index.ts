@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 //routes for product api
-import productRoutes from "./routes/productRoutes.ts";
+import productRoutes from "./routes/productRoutes";
 app.use("/api/v1/product", productRoutes);
 
 const port = process.env.port || 8083;

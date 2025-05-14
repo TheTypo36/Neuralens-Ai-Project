@@ -13,14 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.importData = void 0;
-const dbConnect_1 = require("../db/dbConnect"); // needed
 const productSchema_1 = require("../models/productSchema");
 const xlsx_1 = __importDefault(require("xlsx"));
 const path_1 = __importDefault(require("path"));
 const importData = () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     try {
-        yield (0, dbConnect_1.dbConnect)();
         const workbook = xlsx_1.default.readFile(path_1.default.join(__dirname, "../data/demo_data.xls"));
         const sheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = xlsx_1.default.utils.sheet_to_json(sheet, { defval: "" });
@@ -37,15 +35,14 @@ const importData = () => __awaiter(void 0, void 0, void 0, function* () {
                 image_url: prd.image_url,
             });
         }
-        console.log("✅ Data imported successfully");
+        console.log("Data imported successfully");
         const allProducts = yield productSchema_1.Product.find();
-        console.log("📦 Fetched products:", allProducts);
+        console.log("Fetched products:", allProducts);
     }
     catch (error) {
-        console.error("❌ Error during import:", error);
+        console.error("Error during import:", error);
     }
     finally {
-        // Optional but clean
         process.exit();
     }
 });
