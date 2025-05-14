@@ -12,9 +12,18 @@ This README outlines the technologies used to build the Neuralens AI Project, de
 - **xlsx Library:** Converts Excel (xlsx) files to JSON format for efficient data storage and retrieval.
 
   - I created a importData function in **utils/importData** which is used for importing the data in mongodb.
+
+  - showing the function for importing the data
     [![showing the function for importing the data](image.png)]
-    (![pushing in mongodb](image-1.png))
+
+  - pushing data from xls intp mongodb
+    (![pushing data from xls intp mongodb](image-1.png))
+
+  - screenshot of database containing the data
     ![screenshot of database containing the data](image-2.png)
+
+  - working postman request for filter based on price
+    ![working postman request for filter based on price](image-3.png)
 
   - if you want to put some new data in data base just put he file in **./backend/dist/data** keep the name of the file as **demo_data.xls** and then un comment the **importData()** statment in **backend/src/index.ts** folder
 
