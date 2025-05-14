@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { dbConnect } from "./db/dbConnect";
+import { importData } from "./utils/importData";
 
 dotenv.config();
 
@@ -12,6 +13,8 @@ dbConnect().then(() => {
     return;
   });
 });
+
+// importData(); only runned first time so that data inserted in mongodb
 
 app.get("/", (req, res) => {
   res.send("<H1>hello Neuralens Ai</H1>");
