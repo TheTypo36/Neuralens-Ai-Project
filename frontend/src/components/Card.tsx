@@ -32,18 +32,19 @@ export function Card(Props: propDocument) {
           />
           <div className="flex flex-col">
             <p className="font-normal text-base text-gray-50 relative z-10">
-              Manu Arora
+              {Props.product_name}
             </p>
             <p className="text-sm text-gray-400">2 min read</p>
           </div>
         </div>
         <div className="text content">
           <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-            {props.product_name}
+            {Props.price}
+            <br />
+            {Props.color}
           </h1>
           <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
-            Card with Author avatar, complete name and time to read - most
-            suitable for blogs.
+            {Props.description}
           </p>
         </div>
       </div>
